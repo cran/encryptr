@@ -22,7 +22,8 @@
 #' # genkeys()
 #'
 #' # For CRAN purposes and testing
-#' genkeys(file.path(tempdir(), "id_rsa"))
+#' temp_dir = tempdir()
+#' genkeys(file.path(temp_dir, "id_rsa3"))
 #'
 genkeys <- function(private_key_name = "id_rsa",
                     public_key_name = paste0(private_key_name, ".pub")){
@@ -49,4 +50,14 @@ genkeys <- function(private_key_name = "id_rsa",
   )
   openssl::write_pem(pubkey,
                      public_key_name)
+
+  if(file.exists(private_key_name)){
+    cat("Private key written with name '", private_key_name, "'\n", sep = "")
+  }
+
+  if(file.exists(public_key_name)){
+    cat("Public key written with name '", public_key_name, "'\n", sep = "")
+  }
+
+
 }
