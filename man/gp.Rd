@@ -3,13 +3,15 @@
 \docType{data}
 \name{gp}
 \alias{gp}
-\title{General Practioner (family doctor) practices in Scotland 2018}
-\format{A data frame with 1212 rows and 12 variables}
+\title{General Practitioner (family doctor) practices in Scotland 2018}
+\format{
+A data frame with 1212 rows and 12 variables
+}
 \usage{
 data(gp)
 }
 \description{
-From here: \url{https://digital.nhs.uk/services/organisation-data-service/data-downloads/home-countries}
+From NHS Digital Organisational Services
 Downloaded February 2019
 }
 \keyword{data}

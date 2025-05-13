@@ -4,8 +4,14 @@
 \alias{encrypt}
 \title{Encrypt a data frame or tibble column using an RSA public/private key}
 \usage{
-encrypt(.data, ..., public_key_path = "id_rsa.pub", lookup = FALSE,
-  lookup_name = "lookup", write_lookup = TRUE)
+encrypt(
+  .data,
+  ...,
+  public_key_path = "id_rsa.pub",
+  lookup = FALSE,
+  lookup_name = "lookup",
+  write_lookup = TRUE
+)
 }
 \arguments{
 \item{.data}{A data frame or tibble.}

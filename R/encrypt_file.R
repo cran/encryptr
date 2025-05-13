@@ -13,7 +13,7 @@
 #' referred to as an envelope.
 #'
 #' @param .path Quoted path to file to encrypt.
-#' @param crypt_file_name Optional new name to give encrypted file. Must end with ".encrypter.bin".
+#' @param crypt_file_name Optional new name to give encrypted file. Must end with ".encryptr.bin".
 #' @param public_key_path Quoted path to public key, created with
 #'   \code{\link{genkeys}}.
 #'
@@ -40,9 +40,10 @@ encrypt_file <- function(.path, crypt_file_name = NULL, public_key_path = "id_rs
     stop("File for encryption cannot be found.")
   }
 
-  if (!file.exists(public_key_path)) {
-    stop("Public key cannot be found. \n  Should be created with encryptr::genkeys")
-  }
+  # The following doesn't work with URL
+  # if (!file.exists(public_key_path)) {
+  #   stop("Public key cannot be found. \n  Should be created with encryptr::genkeys")
+  # }
 
   if(is.null(crypt_file_name)){
     .crypt_file = paste0(.path, ".encryptr.bin")

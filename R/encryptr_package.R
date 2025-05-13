@@ -1,5 +1,7 @@
 #' encryptr: Encrypt and decrypt data frame or tibble columns using the strong RSA public/private keys.
 #'
+#' Use openssl to encrypt and decrypt data frame or tibble columns.
+#'
 #' @section \code{encryptr} key generation:
 #'
 #' \link{genkeys},
@@ -12,9 +14,9 @@
 #' @name encryptr-package
 NULL
 
-#' General Practioner (family doctor) practices in Scotland 2018
+#' General Practitioner (family doctor) practices in Scotland 2018
 #'
-#' From here: \url{https://digital.nhs.uk/services/organisation-data-service/data-downloads/home-countries}
+#' From NHS Digital Organisational Services
 #' Downloaded February 2019
 #'
 #' @name gp

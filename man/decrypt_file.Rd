@@ -21,13 +21,17 @@ The decrypted file is saved with optional file name.
 See \code{\link{encrypt_file}} for details.
 }
 \examples{
-# This will run:
-# Create example file to encrypt
-# write.csv(gp, "gp.csv")
-# genkeys()
-# encrypt_file("gp.csv")
-# decrypt_file("gp.csv.encryptr.bin", file_name = "gp2.csv")
 
+#' # For CRAN and testing:
+\dontrun{
+# Run only once in decrypt_file example
+temp_dir = tempdir() # temp directory for testing only
+genkeys(file.path(temp_dir, "id_rsa"))
+write.csv(gp, file.path(temp_dir, "gp.csv"))
+encrypt_file(file.path(temp_dir, "gp.csv"), public_key_path = file.path(temp_dir, "id_rsa.pub"))
+}
+
+\dontrun{
 # For CRAN and testing:
 temp_dir = tempdir() # temp directory for testing only
 genkeys(file.path(temp_dir, "id_rsa4"))
@@ -36,4 +40,5 @@ encrypt_file(file.path(temp_dir, "gp.csv"), public_key_path = file.path(temp_dir
 decrypt_file(file.path(temp_dir, "gp.csv.encryptr.bin"),
   private_key_path = file.path(temp_dir, "id_rsa4"),
   file_name = "file.path(temp_dir, gp2.csv)")
+  }
 }

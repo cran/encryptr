@@ -5,7 +5,7 @@
 \alias{encryptr-package}
 \title{encryptr: Encrypt and decrypt data frame or tibble columns using the strong RSA public/private keys.}
 \description{
-encryptr: Encrypt and decrypt data frame or tibble columns using the strong RSA public/private keys.
+Use openssl to encrypt and decrypt data frame or tibble columns.
 }
 \section{\code{encryptr} key generation}{
 

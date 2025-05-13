@@ -4,8 +4,13 @@
 \alias{decrypt}
 \title{Decrypt a data frame or tibble column using an RSA public/private key}
 \usage{
-decrypt(.data, ..., private_key_path = "id_rsa", lookup_object = NULL,
-  lookup_path = NULL)
+decrypt(
+  .data,
+  ...,
+  private_key_path = "id_rsa",
+  lookup_object = NULL,
+  lookup_path = NULL
+)
 }
 \arguments{
 \item{.data}{A data frame or tibble.}

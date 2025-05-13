@@ -1,7 +1,7 @@
 #' Create and write RSA private and public keys
 #'
 #' The first step for the \code{encryptr} workflow is to create a pair of
-#' encryption keys. This uses the \code{\link{openssl}} package. The public key
+#' encryption keys. This uses the \code{openssl} package. The public key
 #' is used to encrypt information and can be shared. The private key allows
 #' decryption of the encrypted information. It requires a password to be set.
 #' This password cannot be recovered if lost. If the file is lost or
@@ -57,6 +57,10 @@ genkeys <- function(private_key_name = "id_rsa",
 
   if(file.exists(public_key_name)){
     cat("Public key written with name '", public_key_name, "'\n", sep = "")
+  }
+
+  if(file.exists(public_key_name) | file.exists(private_key_name)){
+    cat("It is strongly suggested that you add the private key to your .gitignore file if you backup your project with git")
   }
 
 
